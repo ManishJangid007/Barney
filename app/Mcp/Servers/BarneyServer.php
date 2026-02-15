@@ -4,6 +4,8 @@ namespace App\Mcp\Servers;
 
 use App\Mcp\Tools\ConfirmDeleteTool;
 use App\Mcp\Tools\GetPreferencesTool;
+use App\Mcp\Tools\ListAlertsTool;
+use App\Mcp\Tools\ManageAlertTool;
 use App\Mcp\Tools\GetProfileTool;
 use App\Mcp\Tools\GetSummaryTool;
 use App\Mcp\Tools\ListAccountsTool;
@@ -75,6 +77,10 @@ class BarneyServer extends Server
         // Delete safety wall
         RequestDeleteTool::class,
         ConfirmDeleteTool::class,
+
+        // Alerts & Reminders
+        ManageAlertTool::class,
+        ListAlertsTool::class,
 
         // Dashboard
         GetSummaryTool::class,

@@ -9,3 +9,11 @@ apps:
       - --tries=1
       - --sleep=3
       - --timeout=120
+
+  - name: barney-scheduler
+    script: artisan
+    interpreter: php
+    exec_mode: fork
+    instances: 1
+    args:
+      - schedule:work
