@@ -81,6 +81,18 @@ class BarneyServer extends Server
     ];
 
     /**
+     * Return the registered tool classes for internal use (e.g. LLM integration).
+     *
+     * @return array<int, class-string<\Laravel\Mcp\Server\Tool>>
+     */
+    public static function getToolClasses(): array
+    {
+        $reflection = new \ReflectionClass(static::class);
+
+        return $reflection->getProperty('tools')->getDefaultValue();
+    }
+
+    /**
      * @var array<int, class-string<\Laravel\Mcp\Server\Resource>>
      */
     protected array $resources = [
