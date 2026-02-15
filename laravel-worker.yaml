@@ -1,0 +1,11 @@
+apps:
+  - name: barney-worker
+    script: artisan
+    interpreter: php
+    exec_mode: fork
+    instances: 1
+    args:
+      - queue:work
+      - --tries=1
+      - --sleep=3
+      - --timeout=120
