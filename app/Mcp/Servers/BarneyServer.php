@@ -17,6 +17,7 @@ use App\Mcp\Tools\LogIncomeTool;
 use App\Mcp\Tools\ManageAccountTool;
 use App\Mcp\Tools\ManagePreferenceTool;
 use App\Mcp\Tools\RequestDeleteTool;
+use App\Mcp\Tools\SendEmailTool;
 use App\Mcp\Tools\TransferFundsTool;
 use App\Mcp\Tools\UpdateExpenseTool;
 use App\Mcp\Tools\UpdateIncomeTool;
@@ -84,6 +85,9 @@ class BarneyServer extends Server
 
         // Dashboard
         GetSummaryTool::class,
+
+        // Communication
+        SendEmailTool::class,
     ];
 
     /**
